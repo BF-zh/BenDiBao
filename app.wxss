@@ -1,7 +1,7 @@
 /**app.wxss**/
 page {
   --primary-color: #5ac387;
-  --secondary-color: #999999;
+  --secondary-color: #a7a6a6;
   --border-color:#f3f3f3;
   --link-color: #4c86e3;
   --xs: 3.25px;

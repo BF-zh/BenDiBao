@@ -7,12 +7,35 @@ Page({
    */
   data: {
     isInit:false,
-    navigationColor:"",
-    name:"",
     mainOffsetTop:0,
     opacity:0,
-    idNumber:"",
-    navigetion:getSystemInfo(),
+    gridList:[
+      {
+        titel:"办事攻略",
+        src:"/static/bsgl.png",
+        url:""
+      },
+      {
+        titel:"初出行攻略",
+        src:"/static/cxgl.png",
+        url:""
+      },
+      {
+        titel:"找工作",
+        src:"/static/zgz.png",
+        url:""
+      },
+      {
+        titel:"景点预约",
+        src:"/static/jdyy.png",
+        url:""
+      },
+      {
+        titel:"学区划分",
+        src:"/static/jdyy.png",
+        url:""
+      },
+    ]
   },
 
   /**
@@ -30,17 +53,16 @@ Page({
   },
   onPageScroll () {
     wx.createSelectorQuery().select('#main').boundingClientRect(({top})=>{
-      const {isInit,mainOffsetTop,opacity,navigetion} = this.data
-      const heigth = (navigetion.height+navigetion.statusBarHeight)
+      const {isInit,mainOffsetTop} = this.data
       if(!isInit){
         this.setData({
           isInit:true,
-          mainOffsetTop:top-heigth
+          mainOffsetTop:top
         })
       }
-      if(top-heigth<0) return this.setData({opacity:1})
-      opacity>.5?this.setData({navigationColor:"#000"}):this.setData({navigationColor:"#fff"})
-      this.setData({opacity:(mainOffsetTop-(top-heigth))/mainOffsetTop})
+      console.log((mainOffsetTop-top)/(mainOffsetTop));
+      if(top<0) return this.setData({opacity:1})
+      this.setData({opacity:(mainOffsetTop-top)/(mainOffsetTop)})
     }).exec()
   },
   /**
