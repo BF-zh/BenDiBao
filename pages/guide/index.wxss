@@ -1,1 +1,18 @@
 /* pages/guide/index.wxss */
+.title{
+  position: absolute;
+  padding: var(--sm);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 0 0 var(--md) var(--md );
+  color: #fff;
+}
+.wx-swiper-dots{
+  width: 100%;
+  display: flex;
+  padding-right: var(--md);
+  justify-content: flex-end;
+}
