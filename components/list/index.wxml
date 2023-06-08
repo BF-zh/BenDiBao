@@ -1,0 +1,25 @@
+<!--components/article-list/index.wxml-->
+<view class="px-md bg-white">
+<!-- 头部 -->
+  <view class="flex pt-md justify-between items-center">
+    <view class="flex items-center gap-sm">
+      <view class="dot" />
+      <text class="f-w-500">{{title}}</text>
+    </view>
+    <view class="sub-menu">
+      <text wx:key="index" wx:for="{{subMenu}}" class="sub-menu-item">{{item.text}}</text>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view wx:for="{{list}}" wx:key="index" class="flex gap-sm py-md bb-1 solid">
+    <view class="flex flex-1 justify-between column gap-sm">
+      <text>{{item.title}}</text>
+      <text class="text-sm c-secondary">{{item.time}}</text>
+    </view>
+    <van-image wx:if="{{item.imageSrc}}" radius="var(--sm)" width="200rpx" height="130rpx" src="{{item.imageSrc}}" />
+  </view>
+  <!-- 底部 -->
+  <view class="py-md f-w-500 c-primary align-center">
+     <text>查看更多</text>
+  </view>
+</view>

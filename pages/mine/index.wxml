@@ -1,2 +1,43 @@
 <!--pages/mine/index.wxml-->
-<text>pages/mine/index.wxml</text>
+<view style="height: 400rpx;" class="bg-white flex column justify-center align-center">
+  <van-image width="5em" height="5em" src="/static/tx.png" />
+  <text class="f-w-500">点击登陆</text>
+</view>
+<view class="bt-1 solid flex gap-md bg-white p-md">
+  <van-image width="2em" height="2em" src="/static/wdsc.png" />
+  <view class="flex-1 flex justify-between">
+    <view class="flex column justify-center">
+      <text>我的收藏</text>
+      <text class="text-sm c-secondary">我的收藏记录在这里</text>
+    </view>
+    <van-icon color="var(--secondary-color)" name="arrow" />
+  </view>
+</view>
+<view class="bt-1 solid flex gap-md bg-white p-md">
+  <van-image width="2em" height="2em" src="/static/zj.png" />
+  <view class="flex-1 flex justify-between">
+    <view class="flex column justify-center">
+      <text>我的足迹</text>
+      <text class="text-sm c-secondary">我的收藏记录在这里</text>
+    </view>
+    <van-icon color="var(--secondary-color)" name="arrow" />
+  </view>
+</view>
+<view class="bt-1 solid flex gap-md bg-white p-md">
+  <van-image width="2em" height="2em" src="/static/tj.png" />
+  <view class="flex-1 flex justify-between">
+    <view class="flex column justify-center">
+      <text>推荐给朋友</text>
+    </view>
+    <van-icon color="var(--secondary-color)" name="arrow" />
+  </view>
+</view>
+<view class="flex gap-md bg-white p-md mt-md">
+  <van-image width="2em" height="2em" src="/static/fk.png" />
+  <view class="flex-1 flex justify-between">
+    <view class="flex column justify-center">
+      <text>我要反馈</text>
+    </view>
+    <van-icon color="var(--secondary-color)" name="arrow" />
+  </view>
+</view>

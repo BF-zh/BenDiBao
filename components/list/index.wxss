@@ -1,0 +1,51 @@
+/* components/article-list/index.wxss */
+.dot{
+  --size:.25em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+.dot::after,.dot::before{
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: 100%;
+  top: 0;
+  border-radius: var(--size);
+}
+.dot::after{
+  left: 0;
+  transform: translate(50%);
+  background-color: var(--primary-color);
+}
+.dot::before{
+  right: 0;
+  transform: translate(-50%);
+  background-color: var(--primary-color-light);
+}
+.sub-menu{
+  display: flex;
+  font-size:small;
+  align-items: center;
+}
+.sub-menu-item{
+  position: relative;
+  color: var(--secondary-color);
+  padding: 0 var(--sm);
+}
+.sub-menu-item:last-child{
+  padding-right: 0;
+}
+.sub-menu-item:last-child::before{
+  background: transparent;
+}
+.sub-menu-item::before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1em;
+  right: 0;
+  top: 50%;
+  background-color: var(--secondary-color);
+  transform: translateY(-50%);
+}

@@ -1,2 +1,19 @@
 <!--pages/guide/index.wxml-->
-<text>pages/guide/index.wxml</text>
+<view class="bg-white fixed flex w-full gap-md items-center p-md">
+    <view class="flex items-center gap-sm">
+      <text>成都</text>
+      <view style="--c:#000;" class="triangle" />
+    </view>
+    <view class="c-secondary flex-1 items-center flex justify-between">
+      <view class="flex-1 flex justify-evenly items-center">
+        <text>户籍查询</text>
+        <text>结婚生育</text>
+        <text>出入境</text>
+        <text>车辆交通</text>
+      </view>
+      <van-icon size="1.3em" name="search" />
+    </view>
+  </view>
+  <view style="padding-top: 3em;">
+    12
+  </view>

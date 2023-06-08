@@ -29,6 +29,7 @@
   },
   "usingComponents": {
     "my-navigation":"/components/navigation/index",
+    "article-list":"/components/list/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-image": "@vant/weapp/image/index",
     "van-grid": "@vant/weapp/grid/index",

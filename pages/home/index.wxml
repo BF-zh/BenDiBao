@@ -2,7 +2,7 @@
 <my-navigation isHome background="rgba(255, 127, 42,{{opacity}})">
   <view class="flex h-full gap-md items-center px-md">
     <view class="c-white flex items-center gap-sm">
-      <text>深圳</text>
+      <text>成都</text>
       <view class="triangle" />
     </view>
     <view class="flex text-sm items-center c-secondary bg-white px-md py-sm radius-full flex-1">
@@ -12,13 +12,30 @@
   </view>
 </my-navigation>
 <image class="bg" mode="aspectFill" src="/static/bg.jpeg" />
-<view id="main" style="height: 200vh;">
-  <van-cell-group inset>
-    <van-grid custom-class="bg-white" border="{{false}}">
-      <van-grid-item use-slot>
-        <van-image width="4em" height="4em" src="/static/bsgl.png" />
-        <text class="text-sm">办事攻略</text>
-      </van-grid-item>
-    </van-grid>
-  </van-cell-group>
+<view id="main">
+  <view class="bg-white grid gap-md column-4 m-md radius-md p-sm">
+    <view wx:key="index" class="align-center flex column" wx:for="{{gridList}}">
+      <van-image width="3.5em" height="3.5em" fit="cover" src="{{item.src}}" />
+      <text class="text-sm">{{item.title}}</text>
+    </view>
+  </view>
+  <view class="mt-md bg-white px-md">
+    <view class="py-md flex gap-sm items-center">
+      <van-image width="1em" height="1em" src="/static/hot.png" />
+      <text class="text-l f-w-500">热点咨询</text>
+    </view>
+    <view>
+      <view wx:for-index="index" wx:key="index" wx:for="{{hotList}}" class="flex justify-between py-sm">
+        <view class="flex flex-1 gap-sm items-center">
+          <text style="color: {{item.indexColor}};">{{index+1}}</text>
+          <text style="--w:calc(700rpx - 3em)" class="ellipsis">{{item.title}}</text>
+        </view>
+        <van-image wx:if="{{item.hot}}" width="1em" height="1em" src="/static/hot-1.png" />
+        <van-image wx:else width="1em" height="1em" src="/static/new.png" />
+      </view>
+    </view>
+  </view>
+  <view wx:key="index" wx:for="{{articleList}}" class="mt-md">
+    <article-list title="{{item.title}}" subMenu="{{item.subMenu}}" list="{{item.list}}" />
+  </view>
 </view>
