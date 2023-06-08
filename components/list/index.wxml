@@ -1,7 +1,7 @@
 <!--components/article-list/index.wxml-->
 <view class="px-md bg-white">
 <!-- 头部 -->
-  <view class="flex pt-md justify-between items-center">
+  <view wx:if="{{title}}" class="flex pt-md justify-between items-center">
     <view class="flex items-center gap-sm">
       <view class="dot" />
       <text class="f-w-500">{{title}}</text>

@@ -1,5 +1,5 @@
 <!--pages/guide/index.wxml-->
-<view class="bg-white fixed flex w-full gap-md items-center p-md">
+<view style="z-index: 999;" class="bg-white fixed flex w-full gap-md items-center p-md">
   <view class="flex items-center gap-sm">
     <text>成都</text>
     <view style="--c:#000;" class="triangle" />
@@ -36,3 +36,6 @@
     </swiper-item>
   </swiper>
 </view>
+<view wx:key="index" wx:for="{{articleList}}" class="mb-md">
+    <article-list title="{{item.title}}" subMenu="{{item.subMenu}}" list="{{item.list}}" />
+  </view>

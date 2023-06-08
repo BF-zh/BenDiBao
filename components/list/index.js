@@ -23,7 +23,7 @@ Component({
   properties: {
     title:{
       type:String,
-      value:"我是标题"
+      value:""
     },
     subMenu:{
       type:Array,
